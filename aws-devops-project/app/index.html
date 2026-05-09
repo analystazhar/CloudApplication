@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AWS DevOps Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Production Grade AWS Project</h1>
+
+  <p>User → CloudFront → ALB → EC2 → RDS</p>
+
+  <button onclick="getData()">Check Server</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+async function getData() {
+
+    const response = await fetch('/api');
+
+    const data = await response.json();
+
+    document.getElementById("result").innerHTML = `
+      <h3>${data.message}</h3>
+      <p>Hostname: ${data.hostname}</p>
+      <p>Database: ${data.database}</p>
+    `;
+}
+</script>
+
+</body>
+</html>
