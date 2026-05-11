@@ -2,14 +2,14 @@ terraform {
 
   backend "s3" {
 
-    bucket       = "terraform-state-azhar"
+    bucket         = "terraform-state-azhar"
 
-    key          = "dev/terraform.tfstate"
+    key            = "dev/terraform.tfstate"
 
-    region       = "ap-south-1"
+    region         = "ap-south-1"
 
-    use_lockfile = true
+    dynamodb_table = "terraform-locks"
 
-    encrypt      = true
+    encrypt        = true
   }
 }
