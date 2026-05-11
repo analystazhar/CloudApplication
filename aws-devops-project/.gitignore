@@ -1,0 +1,13 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Terraform Variables
+terraform.tfvars
+
+# AWS CLI ZIP
+awscliv2.zip
+
+# Logs
+*.log
