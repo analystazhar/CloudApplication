@@ -26,7 +26,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  default = "mypersonalkey.pem"
+  default = "mypersonalkey"
 }
 
 variable "db_username" {
